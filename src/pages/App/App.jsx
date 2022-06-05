@@ -10,6 +10,7 @@ import axios from "axios";
 import { useState, useEffect } from "react";
 import './App.css';
 import Coins from '../../components/Coins/Coins';
+import Nav from '../../components/Nav/Nav';
 
 
 function App() {
@@ -33,6 +34,7 @@ function App() {
           <>
             <NavBar user={user} setUser={setUser} />
             <Crypto />
+            <Nav />
             <Coins coins={coins} />
             {/* <CoinItem CoinItem={CoinItem} /> */}
             <Routes>

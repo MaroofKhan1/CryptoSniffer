@@ -11,6 +11,7 @@ export default function NavBar({ user, setUser }) {
   }
 
   return (
+
     <nav>
       <Link to="/app">Test</Link>
       &nbsp; | &nbsp;
