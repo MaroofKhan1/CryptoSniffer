@@ -1,3 +1,3 @@
-# MERN-Stack Infrastructure
+# CryptoSniffer
 
-Clone this repo to provide the starter code for a comprehensive MERN-Stack project including token-based authentication.
+Find your crypto here
