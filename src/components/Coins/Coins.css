@@ -10,16 +10,16 @@
     background-color: #b4c3ff;
     box-shadow: 0px 0px 12px #18191b;
     border-radius: 8px;
-    margin: 2rem 1rem;
-    padding: .7rem 1rem;
+    margin: 30px 10px;
+    padding: 10px 10px;
     font-weight: 700;
 }
 
 .coin-name {
-    margin-left: -4rem;
+    margin-left: -20px;
 }
 
-.coin-row {
+/* .coin-line {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -28,7 +28,7 @@
     border-radius: 8px;
     margin: 2rem 1rem;
     padding: .7rem 1rem;
-}
+} */
 
 .coin-row:hover {
     transform: scale(1.04);
