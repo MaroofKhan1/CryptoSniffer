@@ -11,8 +11,8 @@ const Coins = (props) => {
                 <p className='coin-name' >Coin</p>
                 <p>Price</p>
                 <p>24h</p>
-                <p className='hide-mobile' >Volume</p>
-                <p className='hide-mobile'>Mkt Cap</p>
+                <p>Volume</p>
+                <p>Mkt Cap</p>
             </div>
 
             {props.coins.map(coins => {
