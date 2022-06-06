@@ -7,7 +7,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #b4c3ff;
+    /* background-color: #b4c3ff; */
     box-shadow: 0px 0px 12px #18191b;
     border-radius: 8px;
     margin: 30px 10px;
@@ -19,16 +19,16 @@
     margin-left: -20px;
 }
 
-/* .coin-line {
+.coin-line {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #26272b;
-    box-shadow: 0px 0px 12px #18191b;
+    /* background-color: #26272b; */
+    /* box-shadow: 0px 0px 12px #18191b; */
     border-radius: 8px;
-    margin: 2rem 1rem;
-    padding: .7rem 1rem;
-} */
+    margin: 16px 8px;
+    padding: 5px 8px;
+}
 
 .coin-row:hover {
     transform: scale(1.04);
