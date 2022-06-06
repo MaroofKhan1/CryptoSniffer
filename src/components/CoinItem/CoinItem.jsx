@@ -5,7 +5,7 @@ const CoinItem = (props) => {
     <div className='coin-line' >
         <p>{props.coins.market_cap_rank}</p>
         <div className='img-symbol' >
-          <img src="{props.coins.image}" alt='' />
+          <img src={props.coins.image} alt='' />
           <p>{props.coins.symbol}</p>
         </div>
         <p>{props.coins.current_price}</p>
