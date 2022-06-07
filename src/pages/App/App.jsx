@@ -12,6 +12,7 @@ import './App.css';
 import Coins from '../../components/Coins/Coins';
 import Nav from '../../components/Nav/Nav';
 import CoinDetails from '../../components/CoinDetails/CoinDetails';
+import Chart from '../../components/Chart/Chart';
 
 
 function App() {
@@ -41,6 +42,7 @@ function App() {
               {/* Route components in here */}
               <Route path="/" element={<Coins coins={coins} />} />
               <Route path="/:id" element={<CoinDetails />} />
+              <Route path="/Chart" element={<Chart chart={Chart} />} />
             </Routes>
           </>
           :
