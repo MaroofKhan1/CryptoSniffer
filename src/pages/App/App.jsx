@@ -2,8 +2,7 @@
 import { Routes, Route, Navigate, useNavigate } from 'react-router-dom';
 import { getUser } from "../../utilities/users-service";
 import AuthPage from '../AuthPage/AuthPage';
-// import NewOrderPage from '../NewOrderPage/NewOrderPage';
-// import OrderHistoryPage from '../OrderHistoryPage/OrderHistoryPage';
+import NewOrderPage from '../NewOrderPage/NewOrderPage';
 import NavBar from "../../components/NavBar/NavBar";
 import Crypto from '../../components/Crypto/Crypto';
 import axios from "axios";
@@ -46,16 +45,14 @@ function App() {
     //       });
   }  
 
-  const url = "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=9&page=1&sparkline=false";
+  // const url = "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=9&page=1&sparkline=false";
     useEffect(() => {
-      axios
-        .get(url)
-        .then((response) => {
-          setCoins(response.data);
-          console.log(response.data[0]);
-        })
-        .catch((error) => {
-        });
+      async function coins() {
+        const coins = await coinService.getCoins()
+        setCoins(coins)
+        // navigate(`/${coins.coins[0].id}`)
+      }
+      coins()
     }, [])
     return (
       <main className="App">
