@@ -9,12 +9,12 @@ const CoinDetails = (props) => {
     const [coin, setCoin] = useState({})
     const {id} = useParams()
     const url =`https://api.coingecko.com/api/v3/coins/${id}`
-    useEffect (() => {
+    // useEffect (() => {
     axios.get(url).then((res) => {
       setCoin(res.data)
     }).catch((error) => {
     })
-  }, [] )
+  // }, [] )
   return (
     <>
     <div>

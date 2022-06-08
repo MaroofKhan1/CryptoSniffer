@@ -6,6 +6,7 @@ import React from 'react'
 const Search = ({handleSearch}) => {
     const [search, setSearch] = useState('')
     const handleChange = (evt) => {
+      console.log(evt.target.value)
         setSearch(evt.target.value)
     }
   return (
