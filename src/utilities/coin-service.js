@@ -8,3 +8,7 @@ export function search(term) {
 export function getCoins() {
     return sendRequest(`${BASE_URL}/getCoins`);
 }
+
+export function details() {
+    return sendRequest(`${BASE_URL}/details`);
+}
