@@ -5,8 +5,15 @@ const User = require('../../models/user');
 module.exports = {
   create,
   login,
-  checkToken
+  checkToken,
+  search
 };
+
+
+async function search(req, res) {
+  const results = await fetch('https://api.coingecko.com/api/v3/search?query=${search}').then(res => res.json());
+  res.json(results)
+}
 
 function checkToken(req, res) {
   console.log(req.user);
