@@ -32,19 +32,26 @@ async function details(req, res) {
 }
 
 async function addCoin(req, res) {
-    const coin = await Coin.findOne({_id:req.body._id})
+    const coin = await Coin.findOne({name:req.body.name})
     // console.log(coin)
     if (coin) {
-        let coinUser = coin.user.includes(req.user._id)
+        let coinUser = coin.users.includes(req.user._id)
         if (coinUser) return
-        coin.user.push(req.user._id)
+        coin.users.push(req.user._id)
         await coin.save()
         res.json(coin)
     } else {
         req.body.user = req.user._id
         const newCoin = new Coin(req.body)
+        newCoin.users.push(req.user._id)
         await newCoin.save()
         res.json(newCoin)
     }
 
+}
+
+
+async function listCoin(req, res) {
+    const coins = await Coin.find({users:{'$in':[req.body.user._id]}})
+    res.json(coins)
 }

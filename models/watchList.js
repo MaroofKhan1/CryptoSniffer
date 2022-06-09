@@ -10,7 +10,8 @@ const coinSchema = new Schema({
     image: String,
     hour: String,
     volume: String,
-    cap: String 
+    cap: String,
+    name: String
 
 })
 

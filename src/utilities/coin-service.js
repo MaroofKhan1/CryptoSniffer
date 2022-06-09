@@ -16,3 +16,4 @@ export function details() {
 export function add(coin) {
     return sendRequest(`${BASE_URL}/addCoin`, 'POST', coin);
 }
+

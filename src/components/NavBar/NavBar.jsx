@@ -17,11 +17,14 @@ export default function NavBar({ user, setUser, handleSearch }) {
     <nav>
       <span>Welcome, {user.name}</span>
       &nbsp; | &nbsp;
+      <Link to="/Home">Home</Link>
+      &nbsp; | &nbsp;
       <Link to="/WatchList">Watch List</Link>
       &nbsp; | &nbsp;
       <Link to="" onClick={handleLogOut}>Log Out</Link>
       &nbsp; | &nbsp;
       <Search handleSearch={handleSearch} />
+
 
     </nav>
     </div>

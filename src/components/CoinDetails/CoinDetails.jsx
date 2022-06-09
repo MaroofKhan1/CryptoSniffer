@@ -3,8 +3,6 @@ import { useParams } from 'react-router-dom'
 import axios from 'axios'
 import {useState, useEffect} from 'react'
 import './CoinDetails.css'
-// import WatchList from '../WatchList/WatchList'
-// import Coins from '../Coins/Coins'
 import * as coinApi from '../../utilities/coin-service'
 import WatchList from '../WatchList/WatchList'
 
@@ -22,6 +20,7 @@ const CoinDetails = (props) => {
     console.log(props.coins)
     async function watchList() {
       const coinObject = {
+        name: newCoin.name,
         price: newCoin.current_price,
         image: newCoin.image,
         hour: newCoin.high_24h,
@@ -29,7 +28,6 @@ const CoinDetails = (props) => {
         cap: newCoin.total_supply
       }
       const addCoin = await coinApi.add(coinObject)
-      console.log(addCoin)
     }
 
 

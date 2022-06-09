@@ -7,7 +7,7 @@ const Nav = () => {
       <div>
         <div className='navbar' >
           <FaCoins className='icon' />
-          <h1><span className='colors'>Search</span></h1>
+          <h1><span className='colors'></span></h1>
         </div>
       </div>
     )
