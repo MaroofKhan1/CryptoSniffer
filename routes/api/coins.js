@@ -6,4 +6,6 @@ router.post('/search', coinsCtrl.search)
 
 router.get('/getCoins', coinsCtrl.coins)
 
+router.post('/addCoin', coinsCtrl.addCoin)
+
 module.exports = router;

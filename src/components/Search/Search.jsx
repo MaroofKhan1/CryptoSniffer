@@ -1,6 +1,6 @@
 import './Search.css'
 // import axios from 'axios'
-import { useState, useEffect } from 'react' 
+import { useState } from 'react' 
 import React from 'react'
 
 const Search = ({handleSearch}) => {

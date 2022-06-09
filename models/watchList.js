@@ -1,12 +1,17 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema; 
 
-const watchListSchema = new Schema({
+const coinSchema = new Schema({
     users: [{
-        name: {type: String},
-        // price: 
-        Image: {type: String}
-    }]
+        type: Schema.Types.ObjectId,
+        ref:'User'
+    }], 
+    price: String,
+    image: String,
+    hour: String,
+    volume: String,
+    cap: String 
+
 })
 
-module.exports = mongoose.model
+module.exports = mongoose.model('Coin', coinSchema);

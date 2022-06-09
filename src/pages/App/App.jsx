@@ -2,10 +2,10 @@
 import { Routes, Route, Navigate, useNavigate } from 'react-router-dom';
 import { getUser } from "../../utilities/users-service";
 import AuthPage from '../AuthPage/AuthPage';
-import NewOrderPage from '../NewOrderPage/NewOrderPage';
+// import NewOrderPage from '../NewOrderPage/NewOrderPage';
 import NavBar from "../../components/NavBar/NavBar";
 import Crypto from '../../components/Crypto/Crypto';
-import axios from "axios";
+// import axios from "axios";
 import { useState, useEffect } from "react";
 import './App.css';
 import Coins from '../../components/Coins/Coins';
@@ -14,6 +14,8 @@ import CoinDetails from '../../components/CoinDetails/CoinDetails';
 import Chart from '../../components/Chart/Chart';
 import Search from '../../components/Search/Search';
 import * as coinService from '../../utilities/coin-service';
+import WatchList from '../../components/WatchList/WatchList';
+// import WatchList from '../../components/WatchList/WatchList';
 
 
 function App() {
@@ -58,16 +60,18 @@ function App() {
       <main className="App">
         { user ?
           <>
-            <NavBar user={user} setUser={setUser}/>
-            <Search handleSearch={handleSearch} />
+            <NavBar user={user} setUser={setUser} handleSearch={handleSearch} />
+            {/* <Search handleSearch={handleSearch} /> */}
             <Crypto />
             <Nav />
+            {/* <WatchList/> */}
             {/* <CoinItem CoinItem={CoinItem} /> */}
             <Routes>
               {/* Route components in here */}
               <Route path="/" element={<Coins coins={coins} handleSearch={handleSearch} />} />
-              <Route path="/:id" element={<CoinDetails />} />
+              <Route path="/:id" element={<CoinDetails coins={coins} />} />
               <Route path="/Chart" element={<Chart chart={Chart} />} />
+              <Route path="/WatchList" element={<WatchList WatchList={WatchList} />} />
             </Routes>
           </>
           :

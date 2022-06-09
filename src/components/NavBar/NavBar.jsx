@@ -1,8 +1,9 @@
 import { Link } from 'react-router-dom';
 import * as userService from '../../utilities/users-service';
 import './NavBar.css'
+import Search from '../Search/Search';
 
-export default function NavBar({ user, setUser }) {
+export default function NavBar({ user, setUser, handleSearch }) {
 
   function handleLogOut() {
     // Remove token using the user service
@@ -16,9 +17,12 @@ export default function NavBar({ user, setUser }) {
     <nav>
       <span>Welcome, {user.name}</span>
       &nbsp; | &nbsp;
-      <Link to="/orders/new">Watch List</Link>
+      <Link to="/WatchList">Watch List</Link>
       &nbsp; | &nbsp;
       <Link to="" onClick={handleLogOut}>Log Out</Link>
+      &nbsp; | &nbsp;
+      <Search handleSearch={handleSearch} />
+
     </nav>
     </div>
   );

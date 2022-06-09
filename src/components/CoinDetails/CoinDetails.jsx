@@ -3,18 +3,36 @@ import { useParams } from 'react-router-dom'
 import axios from 'axios'
 import {useState, useEffect} from 'react'
 import './CoinDetails.css'
+// import WatchList from '../WatchList/WatchList'
 // import Coins from '../Coins/Coins'
+import * as coinApi from '../../utilities/coin-service'
+import WatchList from '../WatchList/WatchList'
 
 const CoinDetails = (props) => {
     const [coin, setCoin] = useState({})
     const {id} = useParams()
     const url =`https://api.coingecko.com/api/v3/coins/${id}`
-    // useEffect (() => {
+    useEffect (() => {
     axios.get(url).then((res) => {
       setCoin(res.data)
     }).catch((error) => {
     })
-  // }, [] )
+  }, [] )
+    const newCoin = props.coins.find(c => c.id===id)
+    console.log(props.coins)
+    async function watchList() {
+      const coinObject = {
+        price: newCoin.current_price,
+        image: newCoin.image,
+        hour: newCoin.high_24h,
+        volume: newCoin.circulating_supply,
+        cap: newCoin.total_supply
+      }
+      const addCoin = await coinApi.add(coinObject)
+      console.log(addCoin)
+    }
+
+
   return (
     <>
     <div>
@@ -32,11 +50,13 @@ const CoinDetails = (props) => {
             </div>
             <div className='coin-price'>
               {/* <h1>{coin.market_data.current_price}</h1> */}
+              <button onClick={watchList}>ADD</button>
             </div>
           </div>
         </div>
       </div>
     </div>
+    {/* <WatchList /> */}
     </>
   )
 }

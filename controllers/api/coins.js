@@ -1,10 +1,12 @@
+const Coin = require ('../../models/watchList')
 const fetch = require ('node-fetch')
 
 
 module.exports={
     search,
     coins,
-    details
+    details,
+    addCoin
 }
 
 async function search(req, res) {
@@ -29,3 +31,20 @@ async function details(req, res) {
     res.json(data)
 }
 
+async function addCoin(req, res) {
+    const coin = await Coin.findOne({_id:req.body._id})
+    // console.log(coin)
+    if (coin) {
+        let coinUser = coin.user.includes(req.user._id)
+        if (coinUser) return
+        coin.user.push(req.user._id)
+        await coin.save()
+        res.json(coin)
+    } else {
+        req.body.user = req.user._id
+        const newCoin = new Coin(req.body)
+        await newCoin.save()
+        res.json(newCoin)
+    }
+
+}
