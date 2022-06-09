@@ -1,5 +1,6 @@
 import * as coinApi from '../../utilities/coin-service'
 import { useState, useEffect } from 'react'
+import './WatchList.css'
 
 const WatchList = () => {
   const [watch, setWatch] = useState()
@@ -10,12 +11,9 @@ const WatchList = () => {
     };
     getWatchList();
   }, [] );
-  console.log('watch', watch)
   return (
-
     <>
-    <h1>HELLOOOOOOO</h1>
-    {watch && watch.map(coin => <p>{coin.name}</p> )}
+    {watch && watch.map(coin => <p>{coin.name} {coin.price} {coin.cap} </p> )}
     </>
   )
 }
