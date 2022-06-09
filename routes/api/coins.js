@@ -8,4 +8,6 @@ router.get('/getCoins', coinsCtrl.coins)
 
 router.post('/addCoin', coinsCtrl.addCoin)
 
+router.get('/watchList', coinsCtrl.watchList)
+
 module.exports = router;

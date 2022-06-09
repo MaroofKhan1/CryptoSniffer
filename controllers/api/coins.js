@@ -6,7 +6,8 @@ module.exports={
     search,
     coins,
     details,
-    addCoin
+    addCoin,
+    watchList
 }
 
 async function search(req, res) {
@@ -18,7 +19,7 @@ async function search(req, res) {
 }
 
 async function coins(req, res) {
-    const url = "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=9&page=1&sparkline=false";
+    const url = "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=9&page=2&sparkline=false";
     const response = await fetch(url);
     const data = await response.json()
     res.json(data)
@@ -33,17 +34,18 @@ async function details(req, res) {
 
 async function addCoin(req, res) {
     const coin = await Coin.findOne({name:req.body.name})
-    // console.log(coin)
     if (coin) {
         let coinUser = coin.users.includes(req.user._id)
         if (coinUser) return
         coin.users.push(req.user._id)
         await coin.save()
         res.json(coin)
+
+
     } else {
-        req.body.user = req.user._id
+        req.body.users = req.user._id
         const newCoin = new Coin(req.body)
-        newCoin.users.push(req.user._id)
+        // newCoin.users.push(req.user._id)
         await newCoin.save()
         res.json(newCoin)
     }
@@ -51,7 +53,7 @@ async function addCoin(req, res) {
 }
 
 
-async function listCoin(req, res) {
-    const coins = await Coin.find({users:{'$in':[req.body.user._id]}})
+async function watchList(req, res) {
+    const coins = await Coin.find({users:{'$in':[req.user._id]}})
     res.json(coins)
 }

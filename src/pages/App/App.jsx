@@ -2,14 +2,12 @@
 import { Routes, Route, Navigate, useNavigate } from 'react-router-dom';
 import { getUser } from "../../utilities/users-service";
 import AuthPage from '../AuthPage/AuthPage';
-
 import NavBar from "../../components/NavBar/NavBar";
 import Crypto from '../../components/Crypto/Crypto';
-
 import { useState, useEffect } from "react";
 import './App.css';
 import Coins from '../../components/Coins/Coins';
-import Nav from '../../components/Nav/Nav';
+// import Nav from '../../components/Nav/Nav';
 import CoinDetails from '../../components/CoinDetails/CoinDetails';
 import Chart from '../../components/Chart/Chart';
 import Search from '../../components/Search/Search';
@@ -64,7 +62,7 @@ function App() {
             <NavBar user={user} setUser={setUser} handleSearch={handleSearch} />
             {/* <Search handleSearch={handleSearch} /> */}
             <Crypto />
-            <Nav />
+            {/* <Nav /> */}
             {/* <WatchList/> */}
             {/* <CoinItem CoinItem={CoinItem} /> */}
             <Routes>

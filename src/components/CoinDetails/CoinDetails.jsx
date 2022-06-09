@@ -17,7 +17,6 @@ const CoinDetails = (props) => {
     })
   }, [] )
     const newCoin = props.coins.find(c => c.id===id)
-    console.log(props.coins)
     async function watchList() {
       const coinObject = {
         name: newCoin.name,

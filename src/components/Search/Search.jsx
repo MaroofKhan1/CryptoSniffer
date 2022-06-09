@@ -1,5 +1,4 @@
 import './Search.css'
-// import axios from 'axios'
 import { useState } from 'react' 
 import React from 'react'
 
@@ -10,10 +9,10 @@ const Search = ({handleSearch}) => {
         setSearch(evt.target.value)
     }
   return (
-    <div className='search'>
-        <input value={search} onChange={handleChange} />
-        <button onClick={() => handleSearch(search)}>Search</button>
-        </div>
+    <div className='search-container'>
+      <input value={search} onChange={handleChange} />
+      <button onClick={() => handleSearch(search)}>Search</button>
+    </div>
   )
 }
 

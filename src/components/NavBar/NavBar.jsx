@@ -11,22 +11,22 @@ export default function NavBar({ user, setUser, handleSearch }) {
     // Update user state in App
     setUser(null);
   }
-
+  
   return (
-    <div className='bar'>
     <nav>
-      <span>Welcome, {user.name}</span>
-      &nbsp; | &nbsp;
-      <Link to="/Home">Home</Link>
-      &nbsp; | &nbsp;
-      <Link to="/WatchList">Watch List</Link>
-      &nbsp; | &nbsp;
-      <Link to="" onClick={handleLogOut}>Log Out</Link>
-      &nbsp; | &nbsp;
-      <Search handleSearch={handleSearch} />
-
-
+        <div className='nav-container'>
+          <div className='search-bar' >
+            {/* <h1><span className='colors'></span></h1> */}
+            <Search handleSearch={handleSearch} />
+          </div>
+          <span>Welcome, {user.name}</span>
+          &nbsp; | &nbsp;
+          <Link to="/Home">Home</Link>
+          &nbsp; | &nbsp;
+          <Link to="/WatchList">Watch List</Link>
+          &nbsp; | &nbsp;
+          <Link to="" onClick={handleLogOut}>Log Out</Link>
+        </div>
     </nav>
-    </div>
   );
 }

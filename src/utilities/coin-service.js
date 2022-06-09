@@ -17,3 +17,8 @@ export function add(coin) {
     return sendRequest(`${BASE_URL}/addCoin`, 'POST', coin);
 }
 
+export function watchList(coin) {
+    return sendRequest(`${BASE_URL}/watchList`);
+}
+
+

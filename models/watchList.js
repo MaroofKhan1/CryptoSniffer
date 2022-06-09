@@ -4,7 +4,8 @@ const Schema = mongoose.Schema;
 const coinSchema = new Schema({
     users: [{
         type: Schema.Types.ObjectId,
-        ref:'User'
+        ref:'User',
+        required: true
     }], 
     price: String,
     image: String,
