@@ -1,5 +1,6 @@
 const Coin = require ('../../models/watchList')
 const fetch = require ('node-fetch')
+// const watchList = require ('../../models/watchList')
 
 
 module.exports={
@@ -12,8 +13,9 @@ module.exports={
 }
 
 async function deleteCoin(req, res) {
-    const remove = await Coin.findByIdAndDelete(req.params.id);
-    res.json(remove);
+    const removeCoin = await Coin.findByIdAndDelete(req.params.id)
+    console.log(removeCoin)
+    res.json(removeCoin);
 }
 
 async function search(req, res) {
