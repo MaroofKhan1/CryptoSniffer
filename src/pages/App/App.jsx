@@ -1,5 +1,5 @@
 // import React from "react";
-import { Routes, Route, Navigate, useNavigate } from 'react-router-dom';
+import { Routes, Route, useNavigate } from 'react-router-dom';
 import { getUser } from "../../utilities/users-service";
 import AuthPage from '../AuthPage/AuthPage';
 import NavBar from "../../components/NavBar/NavBar";
@@ -7,10 +7,8 @@ import Crypto from '../../components/Crypto/Crypto';
 import { useState, useEffect } from "react";
 import './App.css';
 import Coins from '../../components/Coins/Coins';
-// import Nav from '../../components/Nav/Nav';
 import CoinDetails from '../../components/CoinDetails/CoinDetails';
 import Chart from '../../components/Chart/Chart';
-import Search from '../../components/Search/Search';
 import * as coinService from '../../utilities/coin-service';
 import WatchList from '../../components/WatchList/WatchList';
 import Home from '../../components/Home/Home';
@@ -33,7 +31,6 @@ function App() {
   async function getCoin(term) {
     const coins = await coinService.search({term})
     navigate(`/${coins.coins[0].id}`)
-    console.log(coins)
     // const url = `https://api.coingecko.com/api/v3/search?query=${term}`
     // axios
     //       .get(url)

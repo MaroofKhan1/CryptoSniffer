@@ -7,8 +7,14 @@ module.exports={
     coins,
     details,
     addCoin,
-    watchList
+    watchList,
+    // deleteCoin
 }
+
+// async function deleteCoin(req, res) {
+//     const remove = await Coin.findByIdAndDelete(req.params.id);
+//     res.json(remove);
+// }
 
 async function search(req, res) {
     const {term} = req.body

@@ -11,6 +11,7 @@ const WatchList = () => {
     };
     getWatchList();
   }, [] );
+  
   return (
     <>
     {watch && watch.map(coin => <p>{coin.name} {coin.price} {coin.cap} </p> )}
