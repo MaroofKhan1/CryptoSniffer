@@ -31,19 +31,20 @@
     color: white;
 }
 
-/* .justRender {
+.justRender {
     background-color: black;
-} */
+}
 /* .coin-container .content {
     max-width: 740px;
     margin: 1rem auto;
     padding: .7rem 1rem;
     display: flex;
-    flex-direction: column;
-    background-color: #26272b;
-    box-shadow: 0px 0px 12px #18191b;
+    flex-direction: column; */
+    /* background-color: #26272b; */
+    /* box-shadow: 0px 0px 12px #18191b;
     border-radius: 8px;
 } */
+
 
 .rank {
     margin: .5 0;
@@ -62,11 +63,11 @@
     grid-template-columns: repeat(2, 1fr);
 } */
 
-/* .info .coin-heading {
+.info .coin-heading {
     display: flex;
     align-items: center;
     margin: 1rem 0;
-} */
+}
 
 /* .info .coin-price {
     display: flex;
@@ -98,13 +99,13 @@ th {
     width: 100%;
 } */
 
-.stats .row {
+/* .stats .row {
     display: flex;
     justify-content: space-between;
     border-bottom: 1px solid #808080;
     margin: .6rem 0;
     padding-bottom: .5rem;
-}
+} */
 
 .stats .row p:first-child {
     color: #d3d3d3;
@@ -137,4 +138,5 @@ th {
         margin: .5rem 0;
     }
 } */
+
 

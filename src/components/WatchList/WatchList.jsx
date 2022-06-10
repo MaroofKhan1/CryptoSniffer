@@ -23,8 +23,10 @@ async function deleteCoin() {
   
   return (
     <>
-    <button onClick={deleteCoin}>Remove</button>
-    {watch && watch.map(coin => <p>{coin.name} {coin.price} {coin.cap} </p> )}
+    {/* <button onClick={deleteCoin}>Remove</button> */}
+    {watch && watch.map(coin => <p className='render' >{coin.name} | ${coin.price} | {coin.cap} | {coin.hour}
+    <button className='watch-btn' onClick={deleteCoin}>Remove</button>
+    </p> )}
     </>
   )
 }
