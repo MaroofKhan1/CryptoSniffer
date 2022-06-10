@@ -21,4 +21,8 @@ export function watchList(coin) {
     return sendRequest(`${BASE_URL}/watchList`);
 }
 
+export function deleteCoin(id) {
+    return sendRequest(`${BASE_URL}/${id}`, 'DELETE');
+}
+
 
