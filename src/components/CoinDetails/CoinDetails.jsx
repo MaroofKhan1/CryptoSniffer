@@ -4,7 +4,7 @@ import axios from 'axios'
 import {useState, useEffect} from 'react'
 import './CoinDetails.css'
 import * as coinApi from '../../utilities/coin-service'
-// import DOMPurify from 'dompurify'
+import DOMPurify from 'dompurify'
 
 const CoinDetails = (props) => {
     const [coin, setCoin] = useState({})
@@ -100,11 +100,11 @@ const CoinDetails = (props) => {
         </div>
         <div className='content'>
             <div className='about'>
-                {/* <h3>About</h3> */}
-                {/* <p dangerouslySetInnerHTML={{
+                <h3>About</h3>
+                <p dangerouslySetInnerHTML={{
                     __html: DOMPurify.sanitize(coin.description ? coin.description.en : ''),
                 }}>
-                </p> */}
+                </p>
             </div>
             <button className='add-btn' onClick={watchList}>ADD</button>
         </div>

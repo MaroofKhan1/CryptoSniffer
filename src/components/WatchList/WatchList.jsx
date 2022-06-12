@@ -10,7 +10,6 @@ const WatchList = () => {
     const getWatchList = async () => {
       const watch = await coinApi.watchList();
       setWatch(watch);
-      console.log(watch)
     };
     getWatchList();
   }, [refresh] );

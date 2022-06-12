@@ -9,10 +9,12 @@ const Search = ({handleSearch}) => {
         setSearch(evt.target.value)
     }
   return (
+    
     <div className='search-bar'>
       <input className='check' value={search} onChange={handleChange} />
       <button onClick={() => handleSearch(search)}>Search</button>
     </div>
+    
   )
 }
 

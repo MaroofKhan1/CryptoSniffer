@@ -64,8 +64,8 @@ function App() {
             {/* <CoinItem CoinItem={CoinItem} /> */}
             <Routes>
               {/* Route components in here */}
-              <Route path="/" element={<Home />} />
-              <Route path="/Home" element=  {<Coins coins={coins} handleSearch={handleSearch} />} />
+              {/* <Route path="/"  /> */}
+              <Route path="/" element=  {<Coins coins={coins} handleSearch={handleSearch} />} />
               <Route path="/:id" element={<CoinDetails coins={coins} />} />
               <Route path="/Chart" element={<Chart chart={Chart} />} />
               <Route path="/WatchList" element={<WatchList WatchList={WatchList} />} />
@@ -74,6 +74,7 @@ function App() {
           :
           <AuthPage setUser={setUser} />
         }
+        
       </main>
     );
   };

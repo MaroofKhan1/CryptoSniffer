@@ -37,8 +37,9 @@
 
 img {
     height: 40px;
-    margin-right: 8px;
     width: auto;
+    opacity: unset;
+    align-items: center;
 }
 
 .img-symbol {

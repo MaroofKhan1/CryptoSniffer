@@ -38,6 +38,40 @@
 
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
+      
     -->
+
+    <!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  padding: 25px;
+  background-image: url(https://i.imgur.com/v7ZwmGN.png);
+  background-size: cover;
+  color: black;
+  font-size: 25px;
+}
+
+.dark-mode {
+  background-image: url(https://images.unsplash.com/photo-1617396900799-f4ec2b43c7ae?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80);
+  background-size: cover;
+}
+</style>
+</head>
+<body>
+
+<button class="color-change" onclick="myFunction()"></button>
+
+<script>
+function myFunction() {
+   let element = document.body;
+   element.classList.toggle("dark-mode");
+}
+</script>
+
+</body>
+</html>
   </body>
 </html>

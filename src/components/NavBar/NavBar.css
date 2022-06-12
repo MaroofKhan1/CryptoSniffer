@@ -1,0 +1,41 @@
+.nav-container {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #420;
+    z-index: 1;
+}
+
+.search-bar button {
+    margin: 1vmin;
+    color: var(--white);
+    font-size: 1.5vmin;
+    font-weight: bold;
+    border-radius: 0.5vmin;
+    width: 70px;
+    height: 27.2px;
+}
+.nav-content {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: end;
+}
+
+input.check {
+    width: 80px;
+    height: 5px;
+    align-items: center;
+    margin: auto;
+}
+/* 
+img.elon {
+    justify-content: center;
+    display: block;
+    right: auto;
+    margin-right: 1320px;
+} */
