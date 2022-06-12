@@ -39,3 +39,8 @@ img.elon {
     right: auto;
     margin-right: 1320px;
 } */
+
+.welcome {
+    background-color: inherit;
+    color: white;
+}

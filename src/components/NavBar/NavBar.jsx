@@ -18,7 +18,7 @@ export default function NavBar({ user, setUser, handleSearch }) {
             <Search handleSearch={handleSearch} />
           </div>
           <div className='nav-content'>
-            <span>Welcome, {user.name}</span>
+            <span className='welcome'>Welcome, {user.name}</span>
             &nbsp; | &nbsp;
             <Link to="/">Home</Link>
             &nbsp; | &nbsp;

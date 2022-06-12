@@ -144,3 +144,7 @@ th {
     background-color: blue;
     right: 0%;
 } */
+
+th {
+    background-color: inherit;
+}
