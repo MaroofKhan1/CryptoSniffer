@@ -13,7 +13,6 @@ export default function NavBar({ user, setUser, handleSearch }) {
   return (
     <nav className='nav'>
         <div className='nav-content'>
-        {/* <img className='elon' src="" alt="" /> */}
           <div className='nav-logo'>
             <Search handleSearch={handleSearch} />
           </div>

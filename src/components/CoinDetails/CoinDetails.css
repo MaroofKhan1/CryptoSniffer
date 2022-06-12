@@ -92,20 +92,20 @@ th {
     background-color: white;
 }
 
-/* .stats {
+.stats {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 2rem;
     width: 100%;
-} */
+}
 
-/* .stats .row {
+.stats .row {
     display: flex;
     justify-content: space-between;
     border-bottom: 1px solid #808080;
     margin: .6rem 0;
     padding-bottom: .5rem;
-} */
+}
 
 .stats .row p:first-child {
     color: #d3d3d3;
