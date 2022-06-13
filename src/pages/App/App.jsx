@@ -1,4 +1,3 @@
-// import React from "react";
 import { Routes, Route, useNavigate } from 'react-router-dom';
 import { getUser } from "../../utilities/users-service";
 import AuthPage from '../AuthPage/AuthPage';
@@ -11,7 +10,7 @@ import CoinDetails from '../../components/CoinDetails/CoinDetails';
 import Chart from '../../components/Chart/Chart';
 import * as coinService from '../../utilities/coin-service';
 import WatchList from '../../components/WatchList/WatchList';
-import Home from '../../components/Home/Home';
+// import Home from '../../components/Home/Home';
 
 
 
