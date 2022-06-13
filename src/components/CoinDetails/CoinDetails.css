@@ -43,11 +43,14 @@
     background-color: inherit;
     box-shadow: 0px 0px 12px #18191b;
     border-radius: 8px;
+    backdrop-filter: blur( 7px );
+    /* border-radius: 10px; */
 }
 
 
 .rank {
     margin: .5 0;
+    font-size: x-large;
 }
 
 /* .rank-btn {
@@ -77,6 +80,7 @@
 
 .info p {
     padding-right: 1rem;
+    font-size: larger;
 }
 
 /* table {
@@ -113,6 +117,8 @@ th {
 
 .about h3 {
     margin: 1rem 0;
+    color: white;
+    font-size: x-large;
 }
 
 /* @media screen and (max-width: 700px) {
@@ -147,4 +153,15 @@ th {
 
 th {
     background-color: inherit;
+    color: black;
+    font-size: x-large;
+}
+
+h4 {
+    color: white;
+    font-weight: 800;
+}
+
+.rank-size {
+    font-size: large;
 }
