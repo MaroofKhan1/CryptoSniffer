@@ -31,7 +31,7 @@ const CoinDetails = (props) => {
     }
   return (
     // <div>
-    <div className='coin-container'>
+    <div id='coin-container' className="box animate fadeInUp one">
         <div className='content'>
             <h1>{coin.name}</h1>
         </div>

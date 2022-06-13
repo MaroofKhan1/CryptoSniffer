@@ -34,7 +34,7 @@
 .justRender {
     background-color: black;
 }
-.coin-container .content {
+#coin-container .content {
     max-width: 740px;
     margin: 1rem auto;
     padding: .7rem 1rem;
@@ -162,6 +162,32 @@ h4 {
     font-weight: 800;
 }
 
-.rank-size {
-    font-size: large;
-}
+.animate {
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+  }
+.one {
+    -webkit-animation-delay: 0.5s;
+    -moz-animation-delay: 0.5s;
+    animation-delay: 0.5s;
+  }
+  
+@keyframes fadeInUp {
+    from {
+      opacity: 0;
+      -webkit-transform: translate3d(0, 100%, 0);
+      transform: translate3d(0, 100%, 0);
+    }
+  
+    to {
+      opacity: 1;
+      -webkit-transform: none;
+      transform: none;
+    }
+  }
+  .fadeInUp {
+    -webkit-animation-name: fadeInUp;
+    animation-name: fadeInUp;
+  }
