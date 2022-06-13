@@ -126,7 +126,7 @@ input {
 button, a.button {
   margin: 1vmin;
   color: var(--white);
-  background-color: purple;
+  background-color: deeppink;
   font-size: 2vmin;
   font-weight: bold;
   text-decoration: none;
@@ -184,3 +184,4 @@ th {
   top: 0;
   margin-left: 25px;
 }
+
