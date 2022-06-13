@@ -1,5 +1,5 @@
 {
-  "name": "crypto-sniffer",
+  "name": "mern-infrastructure",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -47,17 +47,5 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "http://localhost:3001",
-  "description": "Find your crypto here",
-  "main": "crud-helper.js",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/MaroofKhan1/CryptoSniffer.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/MaroofKhan1/CryptoSniffer/issues"
-  },
-  "homepage": "https://github.com/MaroofKhan1/CryptoSniffer#readme"
+  "proxy": "http://localhost:3001"
 }
