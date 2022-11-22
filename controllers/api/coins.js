@@ -60,8 +60,8 @@ async function addCoin(req, res) {
 
 }
 
- 
 async function watchList(req, res) {
     const coins = await Coin.find({users:{'$in':[req.user._id]}})
     res.json(coins)
 }
+

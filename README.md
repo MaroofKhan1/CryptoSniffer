@@ -13,7 +13,7 @@
 
 ## :eyes: Crypto-Sniffer Overview:
 
-Crypto-Sniffer is a cryptocurrency tracking app that allows you to keep track of all your coins. You can add and delete any coins you wish to add to your watch list. 
+Crypto-Sniffer is a cryptocurrency tracking app that allows you to keep track of all your coins. You can add and delete any coins you wish to add to your watch list. It is user-friendly and simple to use.
 
 
 ## :atom_symbol: Getting Started: 
